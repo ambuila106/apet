@@ -15,7 +15,7 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git remote add origin https://github.com/ambuila106/rela.git
+git remote add origin https://github.com/ambuila106/apet.git
 git push origin master:gh-pages --force
 
 cd -
