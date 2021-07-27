@@ -1,13 +1,14 @@
 import firebase from "firebase";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBq6EE8P1jXvAilEttEb0zAjFwGAzw0VXU",
-    authDomain: "rela-d975b.firebaseapp.com",
-    projectId: "rela-d975b",
-    storageBucket: "rela-d975b.appspot.com",
-    messagingSenderId: "22055814208",
-    appId: "1:22055814208:web:03a096b25474169ae48ba5",
-    measurementId: "G-5JRSLYFG31"
+    apiKey: "AIzaSyCUoyX7UkTRum9VOSV31J9VCuEfw5tM19U",
+    authDomain: "apet-1c6e6.firebaseapp.com",
+    databaseURL: "https://apet-1c6e6-default-rtdb.firebaseio.com",
+    projectId: "apet-1c6e6",
+    storageBucket: "apet-1c6e6.appspot.com",
+    messagingSenderId: "911735279378",
+    appId: "1:911735279378:web:cb7a6cb7be4bbd7ff06dcb",
+    measurementId: "G-CE0LBMWLQ1"
   };
 
 firebase.initializeApp(firebaseConfig);

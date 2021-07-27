@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="title">
-      <h3>Rela U (villao)</h3>
+      <h3>APET (Desliza y adopta)</h3>
     </div>
 
     <Tinder class="tinder" key-name="id" :queue.sync="queue" :offset-y="10" @submit="onSubmit">
@@ -12,7 +12,6 @@
             'background-image': `url(${scope.data.value})`
           }"
         />
-        <div class="point">✰ {{ scope.data.point.like }}</div>
       </template>
 
       <img class="like-pointer" slot="like" src="./assets/like-txt.png">
@@ -41,18 +40,7 @@ export default {
   async created() {
     let db = new Db();
 
-    db.getDatabase("points").then(async (snapshot) => {
-      if (snapshot.exists()) {
-        this.points = await snapshot.val();
-        console.log(this.points);
-      } else {
-        console.log("No data available");
-      }
-    }).catch((error) => {
-        console.error(error);
-    });
-
-    db.getDatabase("participants").then(async (snapshot) => {
+    db.getDatabase("pets").then(async (snapshot) => {
       if (snapshot.exists()) {
         this.data = await snapshot.val();
         this.mock();
@@ -77,7 +65,9 @@ export default {
     },
 
     onSubmit(data) {
-      console.log(data)
+      if(data.type == "like") {
+        window.location = ("https://wa.me/573222762025?text=Me%20interesa%20adoptar");
+      }
       this.updatePoint(data.item.id, data.type)
     },
 
